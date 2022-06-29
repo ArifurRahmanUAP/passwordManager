@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PasswordManager</string>
+    <string name="sign_up">Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="backup_folder_not_present">Backup folder not present</string>
+    <string name="enter_local_database_backup_name">Enter Local Database Backup Name</string>
+    <string name="backup_completed_successfully">Backup Completed Successfully</string>
+    <string name="unable_to_backup_database_retry">Unable to backup database. Retry</string>
+    <string name="unable_to_create_directory_retry">Unable to create directory. Retry</string>
+</resources>
