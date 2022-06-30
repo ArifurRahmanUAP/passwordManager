@@ -55,8 +55,9 @@ public class AddDataFragment extends Fragment {
                     boolean isSuccess = databaseAccess.addUserData(applicationName.getText().toString(), applicationUrl.getText().toString(), username.getText().toString(), password.getText().toString(), others.getText().toString());
                     if (isSuccess) {
                         startActivity(new Intent(getContext(), MainActivity.class));
-                        Toasty.success(getContext(), "Data Saved Successfully").show();
-                    } else Toasty.error(getContext(), "Something Error").show();
+                        getActivity().finish();
+                        Toasty.success(getActivity(), "Data Saved Successfully").show();
+                    } else Toasty.error(getActivity(), "Something Error").show();
                 }
             }
         });

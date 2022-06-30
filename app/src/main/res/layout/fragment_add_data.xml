@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:background="#5C5C5C"
+        android:layout_gravity="center"
         android:gravity="center">
+
+        <ImageView
+            android:id="@+id/backImage"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/appbarTitle"
@@ -22,7 +33,7 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -43,9 +54,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_marginBottom="10dp"
                     android:text="Application Name: *"
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
 
                 <androidx.cardview.widget.CardView
@@ -75,9 +86,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_marginBottom="10dp"
                     android:text="Application URL: "
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
 
                 <androidx.cardview.widget.CardView
@@ -108,8 +119,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:textColor="@color/white"
                     android:text="User Name / Email: *"
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
 
                 <androidx.cardview.widget.CardView
@@ -137,10 +148,10 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Password: *"
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
 
                 <androidx.cardview.widget.CardView
@@ -169,10 +180,10 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Others: "
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
 
                 <androidx.cardview.widget.CardView
@@ -204,7 +215,7 @@
                     android:layout_weight="1"
                     android:max="25"
                     android:progressDrawable="@drawable/seek_bar_ruler"
-                    android:thumb="@drawable/seek_bar_slider"/>
+                    android:thumb="@drawable/seek_bar_slider" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/randomPassword"
@@ -212,9 +223,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
-                    android:background="@color/cardview_dark_background"
+                    android:background="#535353"
+                    android:elevation="2dp"
+                    android:shadowRadius="5"
                     android:text="Password\nGenerate"
-                    android:textColor="@color/white" />
+                    android:textColor="#DFDFDF" />
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
@@ -230,7 +243,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#FF5722"
-                    android:text="Save" />
+                    android:elevation="2dp"
+                    android:text="Save"
+                    android:textColor="@color/white" />
 
             </androidx.cardview.widget.CardView>
 

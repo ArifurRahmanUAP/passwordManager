@@ -44,83 +44,14 @@ public class UserDataEditAdapter extends RecyclerView.Adapter<UserDataEditAdapte
         return viewHolder;
     }
 
-    int seekValue = 8;
 
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull UserDataEditAdapter.ViewHolder holder, int position) {
 
-        holder.editUserDataSave.setText("Update");
-        holder.appbarTitle.setText("Update Data");
-        holder.editApplicationName.setText(userData.get(Constant.APPLICATION_NAME));
-        holder.editApplicationUrl.setText(userData.get(Constant.APPLICATION_URL));
-        holder.editUsername.setText(userData.get(Constant.USERNAME));
-        holder.editPassword.setText(userData.get(Constant.PASSWORD));
-        holder.editOthers.setText(userData.get(Constant.OTHERS));
-
-        holder.editUserDataSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (holder.editUsername.getText().toString().isEmpty() || holder.editPassword.getText().toString().isEmpty() || holder.editApplicationName.getText().toString().isEmpty()) {
-                    Toasty.warning(context, "Fill Up Correctly").show();
-                } else {
 
 
-                    DatabaseAccess databaseAccess = DatabaseAccess.getInstance(context);
-                    databaseAccess.open();
-                    boolean isSuccess = databaseAccess.updateData(userData.get(Constant.ID), holder.editApplicationName.getText().toString(), holder.editApplicationUrl.getText().toString(),
-                            holder.editUsername.getText().toString(), holder.editPassword.getText().toString(), holder.editOthers.getText().toString());
-                    if (isSuccess) {
-                        holder.editApplicationName.setText("");
-                        holder.editApplicationUrl.setText("");
-                        holder.editUsername.setText("");
-                        holder.editPassword.setText("");
-                        holder.editOthers.setText("");
 
-                        context.startActivity(new Intent(context, MainActivity.class));
-                        notifyItemChanged(holder.getAdapterPosition());
-                        Toasty.success(context, "Data Updated Successfully").show();
-                    } else Toasty.error(context, "Something Wrong").show();
-
-                }
-            }
-        });
-
-
-        holder.randomPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$&%#".toCharArray();
-                StringBuilder stringBuilder = new StringBuilder();
-
-                Random rand = new Random();
-
-                for (int i = 0; i < seekValue; i++) {
-                    char c = chars[rand.nextInt(chars.length)];
-                    stringBuilder.append(c);
-                }
-                holder.editPassword.setText(stringBuilder.toString());
-            }
-        });
-
-        holder.passwordLength.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                seekValue = progress;
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
 
 
     }

@@ -1,5 +1,6 @@
 package com.arif.passwordmanager.Adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -37,12 +38,11 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.ViewHo
         LayoutInflater inflater = LayoutInflater.from(context);
         View contactView = inflater.inflate(R.layout.userdataview, parent, false);
 
-        ViewHolder viewHolder = new ViewHolder(contactView);
-        return viewHolder;
+        return new ViewHolder(contactView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserDataAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UserDataAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.applicationName.setText(userData.get(position).get(Constant.APPLICATION_NAME));
         holder.userName.setText(userData.get(position).get(Constant.USERNAME));
@@ -54,9 +54,12 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.ViewHo
                 databaseAccess.open();
                 boolean isSuccess = databaseAccess.deleteData(userData.get(position).get(Constant.ID));
                 if (isSuccess) {
-                    userData.remove(holder.getAdapterPosition());
-                    notifyItemRemoved(holder.getAdapterPosition());
+
+                    userData.remove(position);
+                    notifyItemRemoved(position);
+                    notifyItemRangeChanged(position, userData.size());
                     Toasty.success(context, "Delete Successfully").show();
+
                 } else Toasty.error(context, "Something Error").show();
             }
         });

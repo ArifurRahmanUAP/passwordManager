@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/PasswordManager/app/src/main/res/drawable/ic_add.xml" value="0.221" />
+        <entry key="..\:/Project/PasswordManager/app/src/main/res/drawable/ic_application.xml" value="0.221" />
+        <entry key="..\:/Project/PasswordManager/app/src/main/res/drawable/ic_back.xml" value="0.221" />
+        <entry key="..\:/Project/PasswordManager/app/src/main/res/drawable/ic_home.xml" value="0.221" />
+        <entry key="..\:/Project/PasswordManager/app/src/main/res/drawable/ic_logout.xml" value="0.221" />
+        <entry key="..\:/Project/PasswordManager/app/src/main/res/drawable/ic_person.xml" value="0.221" />
         <entry key="..\:/Project/PasswordManager/app/src/main/res/drawable/seek_bar_slider.xml" value="0.196" />
         <entry key="..\:/Project/PasswordManager/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
         <entry key="..\:/Project/PasswordManager/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Project/PasswordManager/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
         <entry key="..\:/Project/PasswordManager/app/src/main/res/layout/activity_splash_screens.xml" value="0.358695652173913" />
+        <entry key="..\:/Project/PasswordManager/app/src/main/res/layout/activity_user_data_edit.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/PasswordManager/app/src/main/res/layout/fragment_add_data.xml" value="0.358695652173913" />
         <entry key="..\:/Project/PasswordManager/app/src/main/res/layout/fragment_home.xml" value="0.358695652173913" />
         <entry key="..\:/Project/PasswordManager/app/src/main/res/layout/fragment_setting.xml" value="0.22" />

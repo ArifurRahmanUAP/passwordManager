@@ -87,7 +87,7 @@ public class LocalBackup {
                 arrayAdapter.add(file.getName());
 
             AlertDialog.Builder builderSingle = new AlertDialog.Builder(activity);
-            builderSingle.setTitle("Database Restore:");
+            builderSingle.setTitle("If you Restore Database, All Current data will be Replaced");
             builderSingle.setNegativeButton(
                     "Cancel",
                     (dialog, which) -> dialog.dismiss());

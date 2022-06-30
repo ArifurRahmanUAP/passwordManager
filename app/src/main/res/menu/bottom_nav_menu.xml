@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_home"/>
     <item
         android:id="@+id/addData"
-        android:title="Add"
+        android:title="New"
         android:icon="@drawable/ic_add"/>
     <item
         android:id="@+id/profile"
