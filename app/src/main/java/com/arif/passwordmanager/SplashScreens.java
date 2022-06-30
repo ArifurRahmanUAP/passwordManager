@@ -7,17 +7,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.agrawalsuneet.dotsloader.loaders.LazyLoader;
 import com.arif.passwordmanager.Database.DatabaseAccess;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashScreens extends AppCompatActivity {
 
     public final int SPLASH_TIME = 3000;
+    LazyLoader progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screens);
+        progressBar =  findViewById(R.id.progressBar);
 
         new Handler().postDelayed(new Runnable() {
             @Override

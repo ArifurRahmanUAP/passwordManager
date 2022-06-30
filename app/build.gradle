@@ -40,4 +40,6 @@ dependencies {
     implementation 'com.github.GrenderG:Toasty:1.5.2'
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'com.opencsv:opencsv:4.6'
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+
 }

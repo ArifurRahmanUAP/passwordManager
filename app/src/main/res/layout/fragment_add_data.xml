@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1E1E1"
     android:orientation="vertical">
 
     <LinearLayout
@@ -44,6 +43,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_marginBottom="10dp"
                     android:text="Application Name: *"
                     android:textSize="16sp" />
@@ -75,6 +75,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_marginBottom="10dp"
                     android:text="Application URL: "
                     android:textSize="16sp" />
@@ -107,6 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
+                    android:textColor="@color/white"
                     android:text="User Name / Email: *"
                     android:textSize="16sp" />
 
@@ -135,6 +137,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
+                    android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Password: *"
@@ -166,6 +169,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
+                    android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:text="Others: "

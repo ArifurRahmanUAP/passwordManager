@@ -116,7 +116,11 @@ public class SettingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 DatabaseOpenHelper db = new DatabaseOpenHelper(getContext());
-                localBackup.performRestore(db);
+                if (checkStoragePermission()) {
+                    localBackup.performRestore(db);
+                } else requestImportPermission();
+
+
             }
         });
 
@@ -132,6 +136,12 @@ public class SettingFragment extends Fragment {
                 localBackup.performBackup(db);
             } else Toasty.error(getContext(), "Storage Permission required").show();
         }
+
+        if (requestCode == STORAGE_REQUEST_CODE_IMPORT) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                localBackup.performBackup(db);
+            } else Toasty.error(getContext(), "Storage Permission required").show();
+        }
     }
 
 
@@ -142,6 +152,9 @@ public class SettingFragment extends Fragment {
     }
 
     private void requestExportPermission() {
+        ActivityCompat.requestPermissions(getActivity(), storagePermission, STORAGE_REQUEST_CODE_EXPORT);
+    }
+    private void requestImportPermission() {
         ActivityCompat.requestPermissions(getActivity(), storagePermission, STORAGE_REQUEST_CODE_EXPORT);
     }
 

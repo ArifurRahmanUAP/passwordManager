@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1E1E1"
     android:orientation="vertical">
 
     <LinearLayout
@@ -42,7 +41,7 @@
                 android:id="@+id/profileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#E1E1E1"
+                android:textColor="#E1E1E1"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -50,6 +49,7 @@
                 android:id="@+id/profileMail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#E1E1E1"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
@@ -58,6 +58,7 @@
             <TextView
                 android:id="@+id/profileBirthDate"
                 android:layout_width="match_parent"
+                android:textColor="#E1E1E1"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
@@ -76,6 +77,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:textColor="#E1E1E1"
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
                     android:text="Old Password: "
@@ -110,6 +112,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
+                    android:textColor="#E1E1E1"
                     android:gravity="center"
                     android:text="New Password: "
                     android:textSize="16sp" />
@@ -148,7 +151,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#0360AA"
-                    android:text="Save"
+                    android:text="Update Password"
                     android:textColor="@color/white" />
 
             </androidx.cardview.widget.CardView>
@@ -166,7 +169,8 @@
                     android:id="@+id/profileBackup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#3949AB"
+                    android:background="#5E35B1"
+                    android:padding="10dp"
                     android:text="Backup Data"
                     android:textColor="@color/white"
                     app:drawableTint="@color/white" />
@@ -185,8 +189,9 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/profileImport"
                     android:layout_width="match_parent"
+                    android:padding="10dp"
                     android:layout_height="match_parent"
-                    android:background="#3949AB"
+                    android:background="#119517"
                     android:text="Import Data"
                     android:textColor="@color/white"
                     app:drawableTint="@color/white" />
@@ -197,6 +202,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20sp"
                 android:elevation="2dp"
@@ -206,6 +212,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/profileSignOut"
                     android:layout_width="match_parent"
+                    android:padding="10dp"
                     android:layout_height="match_parent"
                     android:background="#F00000"
                     android:drawableStart="@drawable/ic_logout"
